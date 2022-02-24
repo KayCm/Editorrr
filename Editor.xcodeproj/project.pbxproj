@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2AB66C7C27C7E4C1008845F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66C7B27C7E4C1008845F1 /* AppDelegate.m */; };
 		2AB66C7F27C7E4C1008845F1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66C7E27C7E4C1008845F1 /* SceneDelegate.m */; };
-		2AB66C8227C7E4C1008845F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66C8127C7E4C1008845F1 /* ViewController.m */; };
 		2AB66C8527C7E4C1008845F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB66C8327C7E4C1008845F1 /* Main.storyboard */; };
 		2AB66C8727C7E4C5008845F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB66C8627C7E4C5008845F1 /* Assets.xcassets */; };
 		2AB66C8A27C7E4C5008845F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB66C8827C7E4C5008845F1 /* LaunchScreen.storyboard */; };
@@ -34,6 +33,11 @@
 		2AB66D4D27C7E760008845F1 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB66D4C27C7E760008845F1 /* libiconv.tbd */; };
 		2AB66D4F27C7E768008845F1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB66D4E27C7E768008845F1 /* AVFoundation.framework */; };
 		2AB66D5427C7E8A8008845F1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB66D5327C7E8A8008845F1 /* AudioToolbox.framework */; };
+		2AB66D5827C7EA8B008845F1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66D5727C7EA8B008845F1 /* MainViewController.m */; };
+		2AB66D5B27C7EA94008845F1 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66D5A27C7EA94008845F1 /* MineViewController.m */; };
+		2AB66D5E27C7EC6F008845F1 /* EffectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66D5D27C7EC6E008845F1 /* EffectViewCell.m */; };
+		2AB66D6227C7ECBB008845F1 /* FFMpegCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66D6127C7ECBB008845F1 /* FFMpegCommand.mm */; };
+		2AB66D6427C7EDBC008845F1 /* 2022.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2AB66D6327C7EDBC008845F1 /* 2022.mp4 */; };
 		E637F53396E124B884E1A3E5 /* libPods-Editor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7056D1A4137C066D669F089 /* libPods-Editor.a */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +47,6 @@
 		2AB66C7B27C7E4C1008845F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2AB66C7D27C7E4C1008845F1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		2AB66C7E27C7E4C1008845F1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		2AB66C8027C7E4C1008845F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2AB66C8127C7E4C1008845F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2AB66C8427C7E4C1008845F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AB66C8627C7E4C5008845F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AB66C8927C7E4C5008845F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -202,6 +204,15 @@
 		2AB66D5027C7E7C8008845F1 /* thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
 		2AB66D5227C7E82E008845F1 /* va_copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = va_copy.h; sourceTree = "<group>"; };
 		2AB66D5327C7E8A8008845F1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2AB66D5627C7EA8B008845F1 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2AB66D5727C7EA8B008845F1 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		2AB66D5927C7EA94008845F1 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		2AB66D5A27C7EA94008845F1 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		2AB66D5C27C7EC6E008845F1 /* EffectViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectViewCell.h; sourceTree = "<group>"; };
+		2AB66D5D27C7EC6E008845F1 /* EffectViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectViewCell.m; sourceTree = "<group>"; };
+		2AB66D6027C7ECBB008845F1 /* FFMpegCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFMpegCommand.h; sourceTree = "<group>"; };
+		2AB66D6127C7ECBB008845F1 /* FFMpegCommand.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FFMpegCommand.mm; sourceTree = "<group>"; };
+		2AB66D6327C7EDBC008845F1 /* 2022.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2022.mp4; sourceTree = "<group>"; };
 		4012C113617A4F84C26FE0C0 /* Pods-Editor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor.release.xcconfig"; path = "Target Support Files/Pods-Editor/Pods-Editor.release.xcconfig"; sourceTree = "<group>"; };
 		B15E3232373112CEB5BCB2FE /* Pods-Editor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor.debug.xcconfig"; path = "Target Support Files/Pods-Editor/Pods-Editor.debug.xcconfig"; sourceTree = "<group>"; };
 		E7056D1A4137C066D669F089 /* libPods-Editor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Editor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,14 +265,15 @@
 		2AB66C7927C7E4C1008845F1 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				2AB66D6327C7EDBC008845F1 /* 2022.mp4 */,
+				2AB66D5F27C7EC99008845F1 /* Tools */,
+				2AB66D5527C7EA57008845F1 /* Controllers */,
 				2AB66D2B27C7E615008845F1 /* fat-x264 */,
 				2AB66C9327C7E60A008845F1 /* FFmpeg-iOS */,
 				2AB66C7A27C7E4C1008845F1 /* AppDelegate.h */,
 				2AB66C7B27C7E4C1008845F1 /* AppDelegate.m */,
 				2AB66C7D27C7E4C1008845F1 /* SceneDelegate.h */,
 				2AB66C7E27C7E4C1008845F1 /* SceneDelegate.m */,
-				2AB66C8027C7E4C1008845F1 /* ViewController.h */,
-				2AB66C8127C7E4C1008845F1 /* ViewController.m */,
 				2AB66C8327C7E4C1008845F1 /* Main.storyboard */,
 				2AB66C8627C7E4C5008845F1 /* Assets.xcassets */,
 				2AB66C8827C7E4C5008845F1 /* LaunchScreen.storyboard */,
@@ -544,6 +556,28 @@
 			path = compat;
 			sourceTree = "<group>";
 		};
+		2AB66D5527C7EA57008845F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AB66D5627C7EA8B008845F1 /* MainViewController.h */,
+				2AB66D5727C7EA8B008845F1 /* MainViewController.m */,
+				2AB66D5927C7EA94008845F1 /* MineViewController.h */,
+				2AB66D5A27C7EA94008845F1 /* MineViewController.m */,
+				2AB66D5C27C7EC6E008845F1 /* EffectViewCell.h */,
+				2AB66D5D27C7EC6E008845F1 /* EffectViewCell.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2AB66D5F27C7EC99008845F1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2AB66D6027C7ECBB008845F1 /* FFMpegCommand.h */,
+				2AB66D6127C7ECBB008845F1 /* FFMpegCommand.mm */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		4903A27DF31E4FEEC9C8DBAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -626,6 +660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB66C8A27C7E4C5008845F1 /* LaunchScreen.storyboard in Resources */,
+				2AB66D6427C7EDBC008845F1 /* 2022.mp4 in Resources */,
 				2AB66C8727C7E4C5008845F1 /* Assets.xcassets in Resources */,
 				2AB66C8527C7E4C1008845F1 /* Main.storyboard in Resources */,
 			);
@@ -680,8 +715,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB66D6227C7ECBB008845F1 /* FFMpegCommand.mm in Sources */,
+				2AB66D5827C7EA8B008845F1 /* MainViewController.m in Sources */,
 				2AB66D3E27C7E637008845F1 /* ffmpeg_opt.c in Sources */,
-				2AB66C8227C7E4C1008845F1 /* ViewController.m in Sources */,
+				2AB66D5B27C7EA94008845F1 /* MineViewController.m in Sources */,
+				2AB66D5E27C7EC6F008845F1 /* EffectViewCell.m in Sources */,
 				2AB66C7C27C7E4C1008845F1 /* AppDelegate.m in Sources */,
 				2AB66C8D27C7E4C5008845F1 /* main.m in Sources */,
 				2AB66D4027C7E637008845F1 /* ffmpeg_filter.c in Sources */,
