@@ -6,6 +6,7 @@
 //
 
 #import "EffectViewCell.h"
+#import "Masonry.h"
 
 @implementation EffectViewCell
 
@@ -13,9 +14,39 @@
     
     self = [super initWithFrame:frame];
     
-    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-    lbl.text = @"aabbcc123";
-    [self addSubview:lbl];
+    if (self) {
+        
+        UIView *bg = [UIView new];
+        bg.backgroundColor = [UIColor lightGrayColor];
+        bg.layer.cornerRadius = 5;
+        [self addSubview:bg];
+        
+        [bg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.mas_left).with.offset(5);
+            make.right.equalTo(self.mas_right).with.offset(-5);
+            make.top.equalTo(self.mas_top).with.offset(2.5);
+            make.bottom.equalTo(self.mas_bottom).with.offset(-5);
+        }];
+        
+        
+        _lbl = [[UILabel alloc] init];
+        _lbl.textAlignment = NSTextAlignmentCenter;
+        _lbl.font = [UIFont systemFontOfSize:12];
+        [bg addSubview:_lbl];
+        
+        [_lbl mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(bg.mas_centerX).with.offset(0);
+            make.centerY.equalTo(bg.mas_centerY).with.offset(0);
+            make.height.equalTo(@24);
+            make.width.equalTo(bg.mas_width);
+        }];
+        
+       
+        
+    }
+    
+    return self;
+ 
     
     
     return self;

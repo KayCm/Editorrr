@@ -30,15 +30,17 @@
     UITabBarController *tabbar = [UITabBarController new];
     
     MainViewController *main = [MainViewController new];
-    UINavigationController *MainNav = [[UINavigationController alloc] initWithRootViewController:main];
-    MainNav.title = @"首页";
+    main.title = @"首页";
     
     MineViewController *mine = [MineViewController new];
-    UINavigationController *MineNav = [[UINavigationController alloc] initWithRootViewController:mine];
-    MineNav.title = @"我的";
+    mine.title = @"我的";
     
-    tabbar.viewControllers = @[MainNav,MineNav];
-    self.window.rootViewController = tabbar;
+    tabbar.viewControllers = @[main,mine];
+    
+    UINavigationController *Nav = [[UINavigationController alloc] initWithRootViewController:tabbar];
+    Nav.view.backgroundColor = [UIColor colorWithRed:248 green:248 blue:255 alpha:1];
+    self.window.rootViewController = Nav;
+    
     [self.window makeKeyAndVisible];
     
     

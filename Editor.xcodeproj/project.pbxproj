@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2D4EDD27C86C6D000C36C7 /* VideoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D4EDC27C86C6D000C36C7 /* VideoEditViewController.m */; };
+		2A2D4EE027C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D4EDF27C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m */; };
+		2A2D4EE627C8B53C000C36C7 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D4EE527C8B53C000C36C7 /* PlayerViewController.m */; };
+		2A2D4EE927C9301C000C36C7 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 2A2D4EE827C9301C000C36C7 /* ReadMe.md */; };
 		2AB66C7C27C7E4C1008845F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66C7B27C7E4C1008845F1 /* AppDelegate.m */; };
 		2AB66C7F27C7E4C1008845F1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66C7E27C7E4C1008845F1 /* SceneDelegate.m */; };
 		2AB66C8527C7E4C1008845F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB66C8327C7E4C1008845F1 /* Main.storyboard */; };
@@ -37,11 +41,20 @@
 		2AB66D5B27C7EA94008845F1 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66D5A27C7EA94008845F1 /* MineViewController.m */; };
 		2AB66D5E27C7EC6F008845F1 /* EffectViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66D5D27C7EC6E008845F1 /* EffectViewCell.m */; };
 		2AB66D6227C7ECBB008845F1 /* FFMpegCommand.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66D6127C7ECBB008845F1 /* FFMpegCommand.mm */; };
-		2AB66D6427C7EDBC008845F1 /* 2022.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2AB66D6327C7EDBC008845F1 /* 2022.mp4 */; };
+		2AC962F327D5182900000BA5 /* NetRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC962F227D5182900000BA5 /* NetRequestManager.m */; };
+		2AC962F627D51AA500000BA5 /* GetVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC962F527D51AA500000BA5 /* GetVideoViewController.m */; };
 		E637F53396E124B884E1A3E5 /* libPods-Editor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7056D1A4137C066D669F089 /* libPods-Editor.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A2D4EDB27C86C6D000C36C7 /* VideoEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoEditViewController.h; sourceTree = "<group>"; };
+		2A2D4EDC27C86C6D000C36C7 /* VideoEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoEditViewController.m; sourceTree = "<group>"; };
+		2A2D4EDE27C8A57B000C36C7 /* AppDelegate+SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD.h"; sourceTree = "<group>"; };
+		2A2D4EDF27C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD.m"; sourceTree = "<group>"; };
+		2A2D4EE127C8A7EF000C36C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2A2D4EE427C8B53C000C36C7 /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		2A2D4EE527C8B53C000C36C7 /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		2A2D4EE827C9301C000C36C7 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		2AB66C7727C7E4C1008845F1 /* Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Editor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB66C7A27C7E4C1008845F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2AB66C7B27C7E4C1008845F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -212,7 +225,10 @@
 		2AB66D5D27C7EC6E008845F1 /* EffectViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectViewCell.m; sourceTree = "<group>"; };
 		2AB66D6027C7ECBB008845F1 /* FFMpegCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFMpegCommand.h; sourceTree = "<group>"; };
 		2AB66D6127C7ECBB008845F1 /* FFMpegCommand.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FFMpegCommand.mm; sourceTree = "<group>"; };
-		2AB66D6327C7EDBC008845F1 /* 2022.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2022.mp4; sourceTree = "<group>"; };
+		2AC962F127D5182900000BA5 /* NetRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequestManager.h; sourceTree = "<group>"; };
+		2AC962F227D5182900000BA5 /* NetRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequestManager.m; sourceTree = "<group>"; };
+		2AC962F427D51AA500000BA5 /* GetVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetVideoViewController.h; sourceTree = "<group>"; };
+		2AC962F527D51AA500000BA5 /* GetVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetVideoViewController.m; sourceTree = "<group>"; };
 		4012C113617A4F84C26FE0C0 /* Pods-Editor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor.release.xcconfig"; path = "Target Support Files/Pods-Editor/Pods-Editor.release.xcconfig"; sourceTree = "<group>"; };
 		B15E3232373112CEB5BCB2FE /* Pods-Editor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Editor.debug.xcconfig"; path = "Target Support Files/Pods-Editor/Pods-Editor.debug.xcconfig"; sourceTree = "<group>"; };
 		E7056D1A4137C066D669F089 /* libPods-Editor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Editor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +260,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A2D4EE727C9148C000C36C7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		2AB66C6E27C7E4C1008845F1 = {
 			isa = PBXGroup;
 			children = (
@@ -265,7 +288,7 @@
 		2AB66C7927C7E4C1008845F1 /* Editor */ = {
 			isa = PBXGroup;
 			children = (
-				2AB66D6327C7EDBC008845F1 /* 2022.mp4 */,
+				2A2D4EE727C9148C000C36C7 /* Resource */,
 				2AB66D5F27C7EC99008845F1 /* Tools */,
 				2AB66D5527C7EA57008845F1 /* Controllers */,
 				2AB66D2B27C7E615008845F1 /* fat-x264 */,
@@ -279,6 +302,10 @@
 				2AB66C8827C7E4C5008845F1 /* LaunchScreen.storyboard */,
 				2AB66C8B27C7E4C5008845F1 /* Info.plist */,
 				2AB66C8C27C7E4C5008845F1 /* main.m */,
+				2A2D4EDE27C8A57B000C36C7 /* AppDelegate+SVProgressHUD.h */,
+				2A2D4EDF27C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m */,
+				2A2D4EE127C8A7EF000C36C7 /* PrefixHeader.pch */,
+				2A2D4EE827C9301C000C36C7 /* ReadMe.md */,
 			);
 			path = Editor;
 			sourceTree = "<group>";
@@ -565,6 +592,12 @@
 				2AB66D5A27C7EA94008845F1 /* MineViewController.m */,
 				2AB66D5C27C7EC6E008845F1 /* EffectViewCell.h */,
 				2AB66D5D27C7EC6E008845F1 /* EffectViewCell.m */,
+				2A2D4EDB27C86C6D000C36C7 /* VideoEditViewController.h */,
+				2A2D4EDC27C86C6D000C36C7 /* VideoEditViewController.m */,
+				2A2D4EE427C8B53C000C36C7 /* PlayerViewController.h */,
+				2A2D4EE527C8B53C000C36C7 /* PlayerViewController.m */,
+				2AC962F427D51AA500000BA5 /* GetVideoViewController.h */,
+				2AC962F527D51AA500000BA5 /* GetVideoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -572,6 +605,8 @@
 		2AB66D5F27C7EC99008845F1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2AC962F127D5182900000BA5 /* NetRequestManager.h */,
+				2AC962F227D5182900000BA5 /* NetRequestManager.m */,
 				2AB66D6027C7ECBB008845F1 /* FFMpegCommand.h */,
 				2AB66D6127C7ECBB008845F1 /* FFMpegCommand.mm */,
 			);
@@ -660,7 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB66C8A27C7E4C5008845F1 /* LaunchScreen.storyboard in Resources */,
-				2AB66D6427C7EDBC008845F1 /* 2022.mp4 in Resources */,
+				2A2D4EE927C9301C000C36C7 /* ReadMe.md in Resources */,
 				2AB66C8727C7E4C5008845F1 /* Assets.xcassets in Resources */,
 				2AB66C8527C7E4C1008845F1 /* Main.storyboard in Resources */,
 			);
@@ -723,11 +758,16 @@
 				2AB66C7C27C7E4C1008845F1 /* AppDelegate.m in Sources */,
 				2AB66C8D27C7E4C5008845F1 /* main.m in Sources */,
 				2AB66D4027C7E637008845F1 /* ffmpeg_filter.c in Sources */,
+				2A2D4EDD27C86C6D000C36C7 /* VideoEditViewController.m in Sources */,
 				2AB66D4527C7E637008845F1 /* ffmpeg.c in Sources */,
 				2AB66C7F27C7E4C1008845F1 /* SceneDelegate.m in Sources */,
 				2AB66D4627C7E637008845F1 /* ffmpeg_videotoolbox.c in Sources */,
+				2AC962F327D5182900000BA5 /* NetRequestManager.m in Sources */,
+				2A2D4EE027C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m in Sources */,
+				2A2D4EE627C8B53C000C36C7 /* PlayerViewController.m in Sources */,
 				2AB66D4327C7E637008845F1 /* cmdutils.c in Sources */,
 				2AB66D4127C7E637008845F1 /* ffmpeg_hw.c in Sources */,
+				2AC962F627D51AA500000BA5 /* GetVideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,6 +915,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6RTF5M8986;
 				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Editor/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -885,6 +927,11 @@
 					"$(PROJECT_DIR)/Editor/FFmpeg-iOS/include",
 				);
 				INFOPLIST_FILE = Editor/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -917,6 +964,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6RTF5M8986;
 				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Editor/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -927,6 +976,11 @@
 					"$(PROJECT_DIR)/Editor/FFmpeg-iOS/include",
 				);
 				INFOPLIST_FILE = Editor/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

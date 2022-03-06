@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  Editor
+//
+//  Created by Kai on 2022/2/25.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
+#define SCREENH_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define DocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+#define BundlePath(res) [[NSBundle mainBundle] pathForResource:res ofType:nil]
+#define DocumentPath(res) [DocumentDir stringByAppendingPathComponent:res]
+    
+//#define DATE_TIME [[NSDate date] timeIntervalSince1970];
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

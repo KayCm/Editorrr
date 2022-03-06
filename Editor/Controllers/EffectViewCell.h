@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EffectViewCell : UICollectionViewCell
 
+@property(nonatomic,strong)UILabel *lbl;
+
 @end
 
 NS_ASSUME_NONNULL_END
