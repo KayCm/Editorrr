@@ -11,6 +11,16 @@
 		2A2D4EE027C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D4EDF27C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m */; };
 		2A2D4EE627C8B53C000C36C7 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D4EE527C8B53C000C36C7 /* PlayerViewController.m */; };
 		2A2D4EE927C9301C000C36C7 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 2A2D4EE827C9301C000C36C7 /* ReadMe.md */; };
+		2A81DB3927D559390059E5EB /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DB3827D559390059E5EB /* UIColor+Extension.m */; };
+		2A81DB3C27D67D5B0059E5EB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DB3B27D67D5B0059E5EB /* LoginViewController.m */; };
+		2A81DB3F27D6AAC60059E5EB /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DB3E27D6AAC60059E5EB /* UIButton+Gradient.m */; };
+		2A81DB4227D6AB340059E5EB /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DB4127D6AB340059E5EB /* UIImage+Gradient.m */; };
+		2A996A7427D79E7B0026BC35 /* CacheRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A996A7327D79E7B0026BC35 /* CacheRequestManager.m */; };
+		2A996A7727D7C6CB0026BC35 /* BizStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A996A7627D7C6CB0026BC35 /* BizStore.m */; };
+		2A996A7A27D86E540026BC35 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A996A7927D86E540026BC35 /* IndexViewController.m */; };
+		2AA81F3427E0A397000E12B5 /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA81F3327E0A397000E12B5 /* AgreementViewController.m */; };
+		2AA81F3627E0B1B8000E12B5 /* argee.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2AA81F3527E0B1B8000E12B5 /* argee.txt */; };
+		2AA81F3827E0B258000E12B5 /* argee1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2AA81F3727E0B258000E12B5 /* argee1.txt */; };
 		2AB66C7C27C7E4C1008845F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66C7B27C7E4C1008845F1 /* AppDelegate.m */; };
 		2AB66C7F27C7E4C1008845F1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66C7E27C7E4C1008845F1 /* SceneDelegate.m */; };
 		2AB66C8527C7E4C1008845F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB66C8327C7E4C1008845F1 /* Main.storyboard */; };
@@ -55,6 +65,24 @@
 		2A2D4EE427C8B53C000C36C7 /* PlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		2A2D4EE527C8B53C000C36C7 /* PlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		2A2D4EE827C9301C000C36C7 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		2A81DB3727D559390059E5EB /* UIColor+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		2A81DB3827D559390059E5EB /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		2A81DB3A27D67D5B0059E5EB /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2A81DB3B27D67D5B0059E5EB /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2A81DB3D27D6AAC60059E5EB /* UIButton+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Gradient.h"; sourceTree = "<group>"; };
+		2A81DB3E27D6AAC60059E5EB /* UIButton+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Gradient.m"; sourceTree = "<group>"; };
+		2A81DB4027D6AB340059E5EB /* UIImage+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gradient.h"; sourceTree = "<group>"; };
+		2A81DB4127D6AB340059E5EB /* UIImage+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
+		2A996A7227D79E7A0026BC35 /* CacheRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheRequestManager.h; sourceTree = "<group>"; };
+		2A996A7327D79E7B0026BC35 /* CacheRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheRequestManager.m; sourceTree = "<group>"; };
+		2A996A7527D7C6CB0026BC35 /* BizStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BizStore.h; sourceTree = "<group>"; };
+		2A996A7627D7C6CB0026BC35 /* BizStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BizStore.m; sourceTree = "<group>"; };
+		2A996A7827D86E540026BC35 /* IndexViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		2A996A7927D86E540026BC35 /* IndexViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
+		2AA81F3227E0A397000E12B5 /* AgreementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AgreementViewController.h; sourceTree = "<group>"; };
+		2AA81F3327E0A397000E12B5 /* AgreementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AgreementViewController.m; sourceTree = "<group>"; };
+		2AA81F3527E0B1B8000E12B5 /* argee.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = argee.txt; sourceTree = "<group>"; };
+		2AA81F3727E0B258000E12B5 /* argee1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = argee1.txt; sourceTree = "<group>"; };
 		2AB66C7727C7E4C1008845F1 /* Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Editor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB66C7A27C7E4C1008845F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2AB66C7B27C7E4C1008845F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -263,6 +291,8 @@
 		2A2D4EE727C9148C000C36C7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				2AA81F3727E0B258000E12B5 /* argee1.txt */,
+				2AA81F3527E0B1B8000E12B5 /* argee.txt */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -598,6 +628,12 @@
 				2A2D4EE527C8B53C000C36C7 /* PlayerViewController.m */,
 				2AC962F427D51AA500000BA5 /* GetVideoViewController.h */,
 				2AC962F527D51AA500000BA5 /* GetVideoViewController.m */,
+				2A81DB3A27D67D5B0059E5EB /* LoginViewController.h */,
+				2A81DB3B27D67D5B0059E5EB /* LoginViewController.m */,
+				2A996A7827D86E540026BC35 /* IndexViewController.h */,
+				2A996A7927D86E540026BC35 /* IndexViewController.m */,
+				2AA81F3227E0A397000E12B5 /* AgreementViewController.h */,
+				2AA81F3327E0A397000E12B5 /* AgreementViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -609,6 +645,16 @@
 				2AC962F227D5182900000BA5 /* NetRequestManager.m */,
 				2AB66D6027C7ECBB008845F1 /* FFMpegCommand.h */,
 				2AB66D6127C7ECBB008845F1 /* FFMpegCommand.mm */,
+				2A81DB3727D559390059E5EB /* UIColor+Extension.h */,
+				2A81DB3827D559390059E5EB /* UIColor+Extension.m */,
+				2A81DB3D27D6AAC60059E5EB /* UIButton+Gradient.h */,
+				2A81DB3E27D6AAC60059E5EB /* UIButton+Gradient.m */,
+				2A81DB4027D6AB340059E5EB /* UIImage+Gradient.h */,
+				2A81DB4127D6AB340059E5EB /* UIImage+Gradient.m */,
+				2A996A7227D79E7A0026BC35 /* CacheRequestManager.h */,
+				2A996A7327D79E7B0026BC35 /* CacheRequestManager.m */,
+				2A996A7527D7C6CB0026BC35 /* BizStore.h */,
+				2A996A7627D7C6CB0026BC35 /* BizStore.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -695,6 +741,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB66C8A27C7E4C5008845F1 /* LaunchScreen.storyboard in Resources */,
+				2AA81F3827E0B258000E12B5 /* argee1.txt in Resources */,
+				2AA81F3627E0B1B8000E12B5 /* argee.txt in Resources */,
 				2A2D4EE927C9301C000C36C7 /* ReadMe.md in Resources */,
 				2AB66C8727C7E4C5008845F1 /* Assets.xcassets in Resources */,
 				2AB66C8527C7E4C1008845F1 /* Main.storyboard in Resources */,
@@ -752,10 +800,16 @@
 			files = (
 				2AB66D6227C7ECBB008845F1 /* FFMpegCommand.mm in Sources */,
 				2AB66D5827C7EA8B008845F1 /* MainViewController.m in Sources */,
+				2A996A7427D79E7B0026BC35 /* CacheRequestManager.m in Sources */,
 				2AB66D3E27C7E637008845F1 /* ffmpeg_opt.c in Sources */,
+				2A81DB3F27D6AAC60059E5EB /* UIButton+Gradient.m in Sources */,
+				2A81DB3927D559390059E5EB /* UIColor+Extension.m in Sources */,
+				2A81DB3C27D67D5B0059E5EB /* LoginViewController.m in Sources */,
+				2A996A7727D7C6CB0026BC35 /* BizStore.m in Sources */,
 				2AB66D5B27C7EA94008845F1 /* MineViewController.m in Sources */,
 				2AB66D5E27C7EC6F008845F1 /* EffectViewCell.m in Sources */,
 				2AB66C7C27C7E4C1008845F1 /* AppDelegate.m in Sources */,
+				2A81DB4227D6AB340059E5EB /* UIImage+Gradient.m in Sources */,
 				2AB66C8D27C7E4C5008845F1 /* main.m in Sources */,
 				2AB66D4027C7E637008845F1 /* ffmpeg_filter.c in Sources */,
 				2A2D4EDD27C86C6D000C36C7 /* VideoEditViewController.m in Sources */,
@@ -767,7 +821,9 @@
 				2A2D4EE627C8B53C000C36C7 /* PlayerViewController.m in Sources */,
 				2AB66D4327C7E637008845F1 /* cmdutils.c in Sources */,
 				2AB66D4127C7E637008845F1 /* ffmpeg_hw.c in Sources */,
+				2AA81F3427E0A397000E12B5 /* AgreementViewController.m in Sources */,
 				2AC962F627D51AA500000BA5 /* GetVideoViewController.m in Sources */,
+				2A996A7A27D86E540026BC35 /* IndexViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,8 +968,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6RTF5M8986;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 2CPBQW29PP;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Editor/PrefixHeader.pch";
@@ -927,6 +983,7 @@
 					"$(PROJECT_DIR)/Editor/FFmpeg-iOS/include",
 				);
 				INFOPLIST_FILE = Editor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "剪益";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -937,6 +994,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -946,11 +1004,11 @@
 					"$(PROJECT_DIR)/Editor/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/Editor/fat-x264/lib",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Com.M1989.Editorrr;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.M1989.Editorrrrrrrr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -961,8 +1019,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6RTF5M8986;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 2CPBQW29PP;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Editor/PrefixHeader.pch";
@@ -976,6 +1034,7 @@
 					"$(PROJECT_DIR)/Editor/FFmpeg-iOS/include",
 				);
 				INFOPLIST_FILE = Editor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "剪益";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
@@ -986,6 +1045,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -995,11 +1055,11 @@
 					"$(PROJECT_DIR)/Editor/FFmpeg-iOS/lib",
 					"$(PROJECT_DIR)/Editor/fat-x264/lib",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Com.M1989.Editorrr;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.M1989.Editorrrrrrrr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

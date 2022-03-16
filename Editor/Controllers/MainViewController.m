@@ -26,6 +26,7 @@
     UIButton *btn7;
     UIButton *btn8;
     UIButton *btn9;
+    UIButton *btn10;
     int playTime;
     bool isHorizontal;
     
@@ -50,6 +51,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"首页";
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -123,6 +126,18 @@
     playerLayer.position = CGPointMake(SCREEN_WIDTH/2, SCREEN_WIDTH*0.5625/2);
     [_videoBg.layer addSublayer:playerLayer];
     
+    __weak typeof(self) weakSelf = self;
+    
+    [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, NSEC_PER_SEC) queue:NULL usingBlock:^(CMTime time) {
+        CGFloat progress = CMTimeGetSeconds(weakSelf.player.currentItem.currentTime)/CMTimeGetSeconds(weakSelf.player.currentItem.duration);
+        
+        if (progress == 1.0f) {
+            [weakSelf.player pause];
+            [weakSelf.playBtn setSelected:NO];
+        }
+        
+    }];
+    
     
     UIView *playToolsView = [UIView new];
     playToolsView.backgroundColor = [UIColor blackColor];
@@ -143,7 +158,7 @@
     [_playBtn setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateSelected];
     [playToolsView addSubview:_playBtn];
     
-    [_playBtn addTarget:self action:@selector(playerSet) forControlEvents:UIControlEventTouchUpInside];
+    [_playBtn addTarget:self action:@selector(startPlay) forControlEvents:UIControlEventTouchUpInside];
     
     [_playBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(playToolsView.mas_centerY);
@@ -267,7 +282,7 @@
     }];
     
     btn5 = [UIButton new];
-    [btn5 setTitle:@"裁剪*" forState:UIControlStateNormal];
+    [btn5 setTitle:@"居中裁剪*" forState:UIControlStateNormal];
     [btn5 setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
     [btn5 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     [effectListView addSubview:btn5];
@@ -342,6 +357,21 @@
         make.left.equalTo(self.view.mas_left);
         make.height.equalTo(@50);
         make.width.equalTo(@345);
+    }];
+    
+    btn10 = [UIButton new];
+    [btn10 setTitle:@"智能清洗" forState:UIControlStateNormal];
+    [btn10 setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
+    [btn10 setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    [effectListView addSubview:btn10];
+    btn10.tag = 10;
+    [btn10 addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+
+    [btn10 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(btn5.mas_bottom).with.offset(10);
+        make.left.equalTo(btn8.mas_right);
+        make.height.equalTo(@50);
+        make.width.equalTo(@90);
     }];
     
 //    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -551,9 +581,23 @@
         inputUrl = DocumentPath(fileName);
         
     }
+    
+    if (btn10.selected) {
+        
+        fileName = [NSString stringWithFormat:@"%f.mp4",[[NSDate date] timeIntervalSince1970]];
+        
+        NSString *cmd =  [ff ffmpeg_command_ReverseWithInPut:inputUrl WithOutPut:DocumentPath(fileName)];
+        
+        [arr addObject:cmd];
+        
+        inputUrl = DocumentPath(fileName);
+        
+    }
 
     
     NSLog(@"%@",arr);
+    
+    __weak typeof(self) weakSelf = self;
     
     [ff ffmpeg_commandArray:arr completionBlock:^(int result) {
         if (result == 0) {
@@ -565,9 +609,9 @@
 
                 [SVProgressHUD dismissWithCompletion:^{
                     AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL fileURLWithPath:DocumentPath(fileName)]];
-                    [self.player replaceCurrentItemWithPlayerItem:item];
-                    [self.playBtn setSelected:YES];
-                    [self.player play];
+                    [weakSelf.player replaceCurrentItemWithPlayerItem:item];
+                    [weakSelf.player play];
+                    [weakSelf.playBtn setSelected:YES];
 
                 }];
             }
@@ -655,6 +699,9 @@
                                          WithOutPut:DocumentPath(fileNameBg)];
     
 
+    
+    __weak typeof(self) weakSelf = self;
+    
     [ff ffmpeg_commandArray:@[cmd19_9] completionBlock:^(int result) {
 
         
@@ -667,9 +714,10 @@
 
                 [SVProgressHUD dismissWithCompletion:^{
                     AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL fileURLWithPath:DocumentPath(fileNameout)]];
-                    [self.player replaceCurrentItemWithPlayerItem:item];
-                    [self.playBtn setSelected:YES];
-                    [self.player play];
+                    [weakSelf.player replaceCurrentItemWithPlayerItem:item];
+    
+                    [weakSelf.player play];
+                    [weakSelf.playBtn setSelected:YES];
 
                 }];
             }else{
@@ -697,7 +745,10 @@
     }
     
     
-    [self playerStop];
+//    [self playerStop];
+    
+    [self.player pause];
+    [self.playBtn setSelected:NO];
     
     NSString *fileName = [NSString stringWithFormat:@"%f.mp4",[[NSDate date] timeIntervalSince1970]];
     
@@ -742,7 +793,7 @@
     //视频水印
 //    NSString *str = [NSString stringWithFormat:@"ffmpeg -i %@ -i %@ -filter_complex overlay=0:0 -max_muxing_queue_size 1024 %@",_selectUrl,BundlePath(@"2022.mp4"),DocumentPath(fileName)];
 
-    NSString *str;
+    //NSString *str;
     
     //str =  [ff getCommand:4 withInPut:_selectUrl withOutPut:DocumentPath(fileName) withOtherRes:@[BundlePath(@"she.png")]];
     
@@ -819,20 +870,20 @@
     
 }
 
--(void)playerSet{
-    
+-(void)startPlay{
 
     [self.player play];
-    
+
     [_playBtn setSelected:YES];
-    
+
 }
 
--(void)playerStop{
-    [self.player pause];
-    
-    [_playBtn setSelected:NO];
-}
+//
+//-(void)playerStop{
+//    [self.player pause];
+//
+//    [_playBtn setSelected:NO];
+//}
 
 
 -(void)openImgLibrary{
@@ -850,7 +901,34 @@
 
 -(void)addWithDownLoad{
     
+    __weak typeof(self) weakSelf = self;
+    
     GetVideoViewController *add = [GetVideoViewController new];
+    
+    add.valueBlock = ^(NSDictionary * _Nonnull value) {
+        NSLog(@"%@",value);
+        
+        weakSelf.selectUrl = value[@"dir"] ;
+        
+        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL fileURLWithPath:value[@"dir"]]];
+        CGSize videoSize = CGSizeZero;
+        NSArray *arr =  item.asset.tracks;
+        for (AVAssetTrack *t in arr) {
+            if ([t.mediaType isEqualToString:AVMediaTypeVideo]) {
+                videoSize = t.naturalSize;
+            }
+        }
+        self->isHorizontal = false;
+        if (videoSize.width > videoSize.height) {
+            self->isHorizontal = true;
+        }
+        self->playTime = (int)item.asset.duration.value/item.asset.duration.timescale;
+        
+        [weakSelf.player replaceCurrentItemWithPlayerItem:item];
+        
+        [weakSelf.player play];
+        [weakSelf.playBtn setSelected:YES];
+    };
     
     [self presentViewController:add animated:YES completion:^{
             
@@ -871,6 +949,8 @@
     options.deliveryMode = PHVideoRequestOptionsDeliveryModeAutomatic;
                
     
+    __weak typeof(self) weakSelf = self;
+    
     PHImageManager *manager = [PHImageManager defaultManager];
     [manager requestAVAssetForVideo:asset options:options resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
         AVURLAsset *urlAsset = (AVURLAsset *)asset;
@@ -883,7 +963,7 @@
         
         // file:///var/mobile/Media/DCIM/100APPLE/IMG_0403.MOV
         
-        self->_selectUrl = [NSString stringWithFormat:@"%@",url] ;
+        weakSelf.selectUrl = [NSString stringWithFormat:@"%@",url] ;
         
         AVPlayerItem *item = [AVPlayerItem playerItemWithURL:url];
         
@@ -907,9 +987,10 @@
         
         //NSLog(@"%lld",self->playTime.value/self->playTime.timescale);
         
-        [self.player replaceCurrentItemWithPlayerItem:item];
+        [weakSelf.player replaceCurrentItemWithPlayerItem:item];
         
-        [self.player play];
+        [weakSelf.player play];
+        [weakSelf.playBtn setSelected:YES];
     
         
         

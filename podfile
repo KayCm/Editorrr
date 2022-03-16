@@ -5,4 +5,5 @@ target 'Editor' do
   pod 'SVProgressHUD'
   pod 'TZImagePickerController'
   pod 'AFNetworking', '~> 4.0.1'
+  pod 'SDWebImage', '~> 5.12.3'
 end

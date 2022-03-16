@@ -52,6 +52,50 @@ extern "C" {
     
 }
 
+-(void)ffmpeg_commandWithCmdArray:(NSArray *)cmdArr WithProgress:(void (^)(float))progressBlock WithCompletionBlock:(void (^)(int))completionBlock{
+    
+    float i = 1;
+    
+    
+    [cmdArr count];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        
+        
+        for (NSString* commandStr in cmdArr) {
+            
+            // 根据 " " 将指令分割为指令数组
+            NSArray *argv_array = [commandStr componentsSeparatedByString:(@" ")];
+            // 将OC对象转换为对应的C对象
+            int argc = (int)argv_array.count;
+            char** argv = (char**)malloc(sizeof(char*)*argc);
+            for(int i=0; i < argc; i++) {
+                argv[i] = (char*)malloc(sizeof(char)*1024);
+                strcpy(argv[i],[[argv_array objectAtIndex:i] UTF8String]);
+            }
+            
+            // 传入指令数及指令数组,result==0表示成功
+            int result = ffmpeg_main(argc,argv);
+            NSLog(@"执行FFmpeg命令：%@，result = %d",commandStr,result);
+            
+            if (result == 0) {
+                progressBlock(i/[cmdArr count]);
+            }
+            
+//            NSLog(@"WithProgress::::%lu",[i/[cmdArr count] floatValue]);
+//
+//            i++;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionBlock(0);
+        });
+        
+    });
+    
+}
+
 -(void)ffmpeg_command:(NSString *)commandStr completionBlock:(void(^)(int result))completionBlock {
     
 
@@ -192,13 +236,13 @@ extern "C" {
 
 -(NSString*)ffmpeg_command_SpeedPlusWithInPut:(NSString *)input WithOutPut:(NSString *)output{
     
-    return [NSString stringWithFormat:@"ffmpeg -i %@ -filter_complex [0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a] -map [v] -map [a] %@",input,output];
+    return [NSString stringWithFormat:@"ffmpeg -i %@ -filter_complex [0:v]setpts=0.75*PTS[v];[0:a]atempo=1.25[a] -map [v] -map [a] %@",input,output];
     
 }
 
 
 -(NSString*)ffmpeg_command_SpeedMinsWithInPut:(NSString *)input WithOutPut:(NSString *)output{
-    return [NSString stringWithFormat:@"ffmpeg -i %@ -filter_complex [0:v]setpts=1.0*PTS[v];[0:a]atempo=1.0[a] -map [v] -map [a] %@",input,output];;
+    return [NSString stringWithFormat:@"ffmpeg -i %@ -filter_complex [0:v]setpts=1.25*PTS[v];[0:a]atempo=0.8[a] -map [v] -map [a] %@",input,output];;
 }
 
 -(NSString*)ffmpeg_command_DelEndLogoWithInPut:(NSString*)input
@@ -228,6 +272,28 @@ extern "C" {
 //    return [NSString stringWithFormat:@"ffmpeg -i %@ -i %@ -filter_complex overlay=W-w-10:H-h-10 -max_muxing_queue_size 1024 %@",input,pic,output];;
     
     return [NSString stringWithFormat:@"ffmpeg -i %@ -i %@ -filter_complex overlay=10:10 -max_muxing_queue_size 1024 %@",input,pic,output];;
+}
+
+
+-(NSString*)ffmpeg_command_SetPicBorderWithInPut:(NSString *)input WithOutPut:(NSString *)output withPic:(NSString *)pic{
+    
+    return [NSString stringWithFormat:@"ffmpeg -i %@ -i %@ -filter_complex overlay=W/2-w/2:H/2-h/2 -max_muxing_queue_size 1024 %@",pic,input,output];;
+    
+}
+
+
+-(NSString*)ffmpeg_command_ReverseWithInPut:(NSString *)input WithOutPut:(NSString *)output{
+    return [NSString stringWithFormat:@"ffmpeg -i %@ -vf reverse %@",input,output];
+}
+
+-(NSString*)ffmpeg_command_SmartExportWithInPut:(NSString *)input WithOutPut:(NSString *)output{
+    return [NSString stringWithFormat:@"ffmpeg -i %@ -filter_complex [0:v]setpts=0.75*PTS[v];[0:a]atempo=1.25[a] -map [v] -map [a] -r 60 %@",input,output];
+}
+
+-(NSString*)ffmpeg_command_ScaleWithHeight:(int)height WithWidth:(int)width WithInPut:(NSString *)input WithOutPut:(NSString *)output{
+    
+    return [NSString stringWithFormat:@"ffmpeg -i %@ -vf scale=%d:%d,setdar=16:9 %@ -hide_banner",input,width,height,output];
+    
 }
 
 //-(void)ffmpeg_command{

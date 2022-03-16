@@ -26,6 +26,22 @@
              WithErrorBlock:(void(^)     (id NetResultFailureValue))        ErrorBlock;
 
 /**
+ POST请求
+ 
+ @param UrlStr 地址
+ @param Dict 传入值
+ @param SuccessBlock 成功
+ @param FailureBlock 失败
+ @param ErrorBlock 错误
+ */
+-(void)RequestWithPostInUrl:(NSString*)                                     UrlStr
+                  WithToken:(NSString*)                                     token
+               WithPostDict:(NSDictionary*)                                 Dict
+           WithSuccessBlock:(void(^)(id NetResultSuccessValue))             SuccessBlock
+           WithFailureBlock:(void(^)(id NetResultFailureValue))             FailureBlock
+             WithErrorBlock:(void(^)(id NetResultFailureValue))             ErrorBlock;
+
+/**
  GET请求
  
  @param UrlStr 地址

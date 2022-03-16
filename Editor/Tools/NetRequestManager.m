@@ -21,50 +21,45 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer]; // 设置请求数据为 JSON 数据
     /* 设置请求头 */
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-  
-    if ([Dict objectForKey:@"token"]) {
-        UrlStr = [UrlStr stringByAppendingFormat:@"?token=%@",[Dict objectForKey:@"token"]];
-        for (NSString *key in Dict) {
-            if (![key isEqualToString:@"token"]) {
-                UrlStr = [UrlStr stringByAppendingFormat:@"&%@=%@",key,[Dict objectForKey:key]];
-            }
+    
+    [manager.requestSerializer setValue:@"token" forHTTPHeaderField:@"token"];
+    
+    [manager POST:UrlStr parameters:Dict headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)responseObject;
+        if ([responseObject[@"code"] intValue] == 0) {
+            if (SuccessBlock) SuccessBlock(httpResponse);
+        }else{
+            if (FailureBlock) FailureBlock(httpResponse);
         }
-    }else{
-        if (FailureBlock) FailureBlock(@"token not set!");
-        return;
-    }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if(error)ErrorBlock(error);
+    }];
     
-    [manager POST:UrlStr parameters:nil headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
-        }];
+}
+
+-(void)RequestWithPostInUrl:(NSString *)UrlStr WithToken:(NSString *)token WithPostDict:(NSDictionary *)Dict WithSuccessBlock:(void (^)(id))SuccessBlock WithFailureBlock:(void (^)(id))FailureBlock WithErrorBlock:(void (^)(id))ErrorBlock{
     
-//    [manager POST:UrlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//
-//        NSLog(@"请求成功：%@", responseObject);
-//
-//        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)responseObject;
-//
-//        if (httpResponse) {
-//
-//            if (SuccessBlock) SuccessBlock(httpResponse);
-//
-//        }else{
-//
-//            if (FailureBlock) FailureBlock(httpResponse);
-//
-//        }
-//
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//
-//        NSLog(@"请求失败：%@", error);
-//
-//        if(error)ErrorBlock(error);
-//
-//    }];
+    /* 创建网络请求对象 */
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    /* Timeout */
+    manager.requestSerializer.timeoutInterval = 8.f;
+    /* 设置请求和接收的数据编码格式 */
+    manager.requestSerializer = [AFJSONRequestSerializer serializer]; // 设置请求数据为 JSON 数据
+    /* 设置请求头 */
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [manager.requestSerializer setValue:token forHTTPHeaderField:@"token"];
+    
+    [manager POST:UrlStr parameters:Dict headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)responseObject;
+        if ([responseObject[@"code"] intValue] == 0) {
+            if (SuccessBlock) SuccessBlock(httpResponse);
+        }else{
+            if (FailureBlock) FailureBlock(httpResponse);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if(error)ErrorBlock(error);
+    }];
     
 }
 
@@ -78,10 +73,6 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer]; // 设置请求数据为 JSON 数据
     /* 设置请求头 */
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    
-    
-    
     
     [manager GET:UrlStr parameters:Dict headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
             

@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VideoEditViewController : UIViewController
 
+@property(nonatomic,strong)NSString *url;
+@property(nonatomic)BOOL videoHorizontal;
+@property(nonatomic,strong)UIImage *videoCover;
+
 @end
 
 NS_ASSUME_NONNULL_END

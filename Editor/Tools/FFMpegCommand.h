@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)ffmpeg_commandArray:(NSArray*)cmdArr completionBlock:(void(^)(int result))completionBlock;
 
+-(void)ffmpeg_commandWithCmdArray:(NSArray*)cmdArr
+                     WithProgress:(void(^)(float result))progressBlock
+              WithCompletionBlock:(void(^)(int result))completionBlock;
+
 
 
 /// 视频裁剪
@@ -96,6 +100,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 -(NSString*)ffmpeg_command_SetLogoInPut:(NSString *)input WithOutPut:(NSString *)output withPic:(NSString *)pic;
+
+-(NSString*)ffmpeg_command_SetPicBorderWithInPut:(NSString *)input
+                                      WithOutPut:(NSString *)output
+                                         withPic:(NSString *)pic;
+
+-(NSString*)ffmpeg_command_SmartExportWithInPut:(NSString *)input WithOutPut:(NSString *)output;
+
+-(NSString*)ffmpeg_command_ReverseWithInPut:(NSString *)input WithOutPut:(NSString *)output;
+
+-(NSString*)ffmpeg_command_ScaleWithHeight:(int)height
+                                 WithWidth:(int)width
+                                 WithInPut:(NSString *)input
+                                WithOutPut:(NSString *)output;
 
 @end
 

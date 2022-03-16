@@ -7,8 +7,10 @@
 
 #import "SceneDelegate.h"
 
+#import "IndexViewController.h"
 #import "MainViewController.h"
 #import "MineViewController.h"
+#import "UIColor+Extension.h"
 
 @interface SceneDelegate ()
 
@@ -29,16 +31,20 @@
     
     UITabBarController *tabbar = [UITabBarController new];
     
-    MainViewController *main = [MainViewController new];
-    main.title = @"首页";
+    IndexViewController *index = [IndexViewController new];
+    index.title = @"首页";
+    index.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[[UIImage imageNamed:@"index_off"]imageWithRenderingMode:UIImageRenderingModeAutomatic] selectedImage:[[UIImage imageNamed:@"index_on"]imageWithRenderingMode:UIImageRenderingModeAutomatic]];
     
     MineViewController *mine = [MineViewController new];
     mine.title = @"我的";
+    mine.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:[[UIImage imageNamed:@"mine_off"]imageWithRenderingMode:UIImageRenderingModeAutomatic] selectedImage:[[UIImage imageNamed:@"mine_on"]imageWithRenderingMode:UIImageRenderingModeAutomatic]];
+
+    tabbar.viewControllers = @[index,mine];
     
-    tabbar.viewControllers = @[main,mine];
+    [tabbar.tabBar setTintColor:[UIColor colorWithHexString:@"#B46DFA"]];
     
     UINavigationController *Nav = [[UINavigationController alloc] initWithRootViewController:tabbar];
-    Nav.view.backgroundColor = [UIColor colorWithRed:248 green:248 blue:255 alpha:1];
+    //Nav.view.backgroundColor = [UIColor colorWithRed:248 green:248 blue:255 alpha:1];
     self.window.rootViewController = Nav;
     
     [self.window makeKeyAndVisible];
