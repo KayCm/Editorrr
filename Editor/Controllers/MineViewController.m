@@ -360,7 +360,7 @@
 //    UINavigationController *Nav = [[UINavigationController alloc] initWithRootViewController:login];
     
     [self presentViewController:login animated:YES completion:^{
-            
+        [self checking];
     }];
     
 }
@@ -526,7 +526,7 @@
     NSMutableAttributedString *placeholderString = [[NSMutableAttributedString alloc] initWithString:@"请输入激活码" attributes:@{NSForegroundColorAttributeName : [UIColor colorWithHexString:@"#CCCCCC" alpha:1],NSFontAttributeName:[UIFont systemFontOfSize:13]}];
     _actCodeField.attributedPlaceholder = placeholderString;
     
-    _actCodeField.keyboardType = UIKeyboardTypeNumberPad;
+//    _actCodeField.keyboardType = UIKeyboardTypeNumberPad;
     
     [_actCodeField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(bg.mas_left).with.offset(45);
@@ -641,14 +641,14 @@
     [biz RequestActivatingCheckWithSuccessBlock:^(id  _Nonnull NetResultSuccessValue) {
         NSLog(@"%@",NetResultSuccessValue);
         
-//        if (NetResultSuccessValue) {
-//            [UIView animateWithDuration:0.1 animations:^{
-//                [weakSelf.activeCodeBtn setTitle:@"已激活" forState:UIControlStateNormal];
-//                [weakSelf.activeCodeBtn setEnabled:NO];
-//            }];
-//        }else{
-//
-//        }
+        if (NetResultSuccessValue) {
+            [UIView animateWithDuration:0.1 animations:^{
+                [weakSelf.activeCodeBtn setTitle:@"已激活" forState:UIControlStateNormal];
+                [weakSelf.activeCodeBtn setEnabled:NO];
+            }];
+        }else{
+
+        }
         
     } WithFailureBlock:^(id  _Nonnull NetResultFailureValue) {
         

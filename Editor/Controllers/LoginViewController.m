@@ -29,6 +29,8 @@
     // Do any additional setup after loading the view.
     
     [self viewSetup];
+    
+    [SVProgressHUD setMinimumDismissTimeInterval:1.0];
 }
 
 
@@ -286,6 +288,7 @@
         }];
         
     } WithFailureBlock:^(id  _Nonnull NetResultFailureValue) {
+        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultFailureValue[@"message"]];
         NSLog(@"%@",NetResultFailureValue);
     } WithErrorBlock:^(id  _Nonnull NetResultErrorValue) {
         NSLog(@"%@",NetResultErrorValue);
