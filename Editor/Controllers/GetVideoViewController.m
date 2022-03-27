@@ -37,10 +37,10 @@
     
     
     UIButton *close = [UIButton new];
-    [close setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
-    close.backgroundColor = [UIColor colorWithHexString:@"#999999"];
-    close.layer.cornerRadius = 11;
-    close.layer.masksToBounds = YES;
+    [close setImage:[UIImage imageNamed:@"close-black"] forState:UIControlStateNormal];
+//    close.backgroundColor = [UIColor colorWithHexString:@"#999999"];
+//    close.layer.cornerRadius = 11;
+//    close.layer.masksToBounds = YES;
     [self.view addSubview:close];
     [close mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.view.mas_right).with.offset(-20);

@@ -49,6 +49,7 @@
     
     [self.PlayBtn setHidden:YES];
     
+    [SVProgressHUD setMinimumDismissTimeInterval:1.0];
         
 }
 
@@ -74,11 +75,10 @@
         
             
         } WithFailureBlock:^(id  _Nonnull NetResultFailureValue) {
-            
+            [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultFailureValue[@"message"]];
         } WithErrorBlock:^(id  _Nonnull NetResultErrorValue) {
-            
+            [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultErrorValue[@"message"]];
         }];
-        
         
     }
     
@@ -350,6 +350,18 @@
     
     
     CacheRequestManager *cache = [CacheRequestManager new];
+    
+    NSString *token = (NSString*)[cache getWithKey:@"token"];
+
+    if (token == nil) {
+        
+        [SVProgressHUD showErrorWithStatus:@"请登陆"];
+        
+        return;
+        
+    }
+    
+    
     
     if (![[NSString stringWithFormat:@"%@",[cache getWithKey:@"activating"]] isEqualToString:@"1"]) {
 

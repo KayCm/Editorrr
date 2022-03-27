@@ -25,6 +25,15 @@
     [manager.requestSerializer setValue:@"token" forHTTPHeaderField:@"token"];
     
     [manager POST:UrlStr parameters:Dict headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"++++++++++++++++");
+        NSLog(@"%@",UrlStr);
+        NSLog(@"----------------");
+        NSLog(@"%@",Dict);
+        NSLog(@"----------------");
+        NSLog(@"%@",responseObject);
+        NSLog(@"++++++++++++++++");
+        
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)responseObject;
         if ([responseObject[@"code"] intValue] == 0) {
             if (SuccessBlock) SuccessBlock(httpResponse);

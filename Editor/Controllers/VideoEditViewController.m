@@ -57,6 +57,28 @@
     self.title = @"编辑";
     
     [self viewSetup];
+    
+    [SVProgressHUD setMinimumDismissTimeInterval:1.0];
+    
+    self.navigationItem.
+    
+    
+    UIButton *backBtn = [[UIButton alloc] init];
+//    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
+//    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [backBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    [backBtn sizeToFit];
+    backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    [backBtn addTarget:self action:@selector(baclClick) forControlEvents:UIControlEventTouchUpInside];
+   self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+   
+}
+
+-(void)baclClick{
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)viewSetup{

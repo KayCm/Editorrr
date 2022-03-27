@@ -36,6 +36,7 @@
     
 //    [self unLoginViewSetup];
     
+    [SVProgressHUD setMinimumDismissTimeInterval:1.0];
     
 }
 
@@ -603,8 +604,6 @@
         return;
     }
     
-    
-    
     __weak typeof(self) weakSelf = self;
     
     BizStore *biz = [BizStore new];
@@ -621,11 +620,9 @@
         
         
     } WithFailureBlock:^(id  _Nonnull NetResultFailureValue) {
-        
-        [SVProgressHUD showErrorWithStatus:NetResultFailureValue[@"message"]];
-        
+        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultFailureValue[@"message"]];
     } WithErrorBlock:^(id  _Nonnull NetResultErrorValue) {
-            
+        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultErrorValue[@"message"]];
     }];
     
     
@@ -651,8 +648,12 @@
         }
         
     } WithFailureBlock:^(id  _Nonnull NetResultFailureValue) {
+
+        NSLog(@"%@",NetResultFailureValue);
         
     } WithErrorBlock:^(id  _Nonnull NetResultErrorValue) {
+       
+        NSLog(@"%@",NetResultErrorValue);
         
     }];
     

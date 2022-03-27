@@ -289,9 +289,8 @@
         
     } WithFailureBlock:^(id  _Nonnull NetResultFailureValue) {
         [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultFailureValue[@"message"]];
-        NSLog(@"%@",NetResultFailureValue);
     } WithErrorBlock:^(id  _Nonnull NetResultErrorValue) {
-        NSLog(@"%@",NetResultErrorValue);
+        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultErrorValue[@"message"]];
     }];
     
     
@@ -377,9 +376,9 @@
         dispatch_resume(_timer);
         
     } WithFailureBlock:^(id  _Nonnull NetResultFailureValue) {
-        
+        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultFailureValue[@"message"]];
     } WithErrorBlock:^(id  _Nonnull NetResultErrorValue) {
-        
+        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:NetResultErrorValue[@"message"]];
     }];
     
 }
