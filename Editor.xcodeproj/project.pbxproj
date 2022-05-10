@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A010C2D281256F200FE8B57 /* VideoEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A010C2C281256F200FE8B57 /* VideoEditorViewController.m */; };
+		2A1F334E280EF4D60039F947 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F334D280EF4D60039F947 /* ListViewController.m */; };
 		2A2D4EDD27C86C6D000C36C7 /* VideoEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D4EDC27C86C6D000C36C7 /* VideoEditViewController.m */; };
 		2A2D4EE027C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D4EDF27C8A57B000C36C7 /* AppDelegate+SVProgressHUD.m */; };
 		2A2D4EE627C8B53C000C36C7 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2D4EE527C8B53C000C36C7 /* PlayerViewController.m */; };
@@ -15,6 +17,7 @@
 		2A81DB3C27D67D5B0059E5EB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DB3B27D67D5B0059E5EB /* LoginViewController.m */; };
 		2A81DB3F27D6AAC60059E5EB /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DB3E27D6AAC60059E5EB /* UIButton+Gradient.m */; };
 		2A81DB4227D6AB340059E5EB /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81DB4127D6AB340059E5EB /* UIImage+Gradient.m */; };
+		2A82F4E42822FB0400C9662E /* VideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A82F4E32822FB0400C9662E /* VideoCollectionViewCell.m */; };
 		2A996A7427D79E7B0026BC35 /* CacheRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A996A7327D79E7B0026BC35 /* CacheRequestManager.m */; };
 		2A996A7727D7C6CB0026BC35 /* BizStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A996A7627D7C6CB0026BC35 /* BizStore.m */; };
 		2A996A7A27D86E540026BC35 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A996A7927D86E540026BC35 /* IndexViewController.m */; };
@@ -57,6 +60,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A010C2B281256F200FE8B57 /* VideoEditorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoEditorViewController.h; sourceTree = "<group>"; };
+		2A010C2C281256F200FE8B57 /* VideoEditorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoEditorViewController.m; sourceTree = "<group>"; };
+		2A1F334C280EF4D60039F947 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		2A1F334D280EF4D60039F947 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		2A2D4EDB27C86C6D000C36C7 /* VideoEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoEditViewController.h; sourceTree = "<group>"; };
 		2A2D4EDC27C86C6D000C36C7 /* VideoEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoEditViewController.m; sourceTree = "<group>"; };
 		2A2D4EDE27C8A57B000C36C7 /* AppDelegate+SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD.h"; sourceTree = "<group>"; };
@@ -73,6 +80,8 @@
 		2A81DB3E27D6AAC60059E5EB /* UIButton+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Gradient.m"; sourceTree = "<group>"; };
 		2A81DB4027D6AB340059E5EB /* UIImage+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gradient.h"; sourceTree = "<group>"; };
 		2A81DB4127D6AB340059E5EB /* UIImage+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
+		2A82F4E22822FB0400C9662E /* VideoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCollectionViewCell.h; sourceTree = "<group>"; };
+		2A82F4E32822FB0400C9662E /* VideoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCollectionViewCell.m; sourceTree = "<group>"; };
 		2A996A7227D79E7A0026BC35 /* CacheRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheRequestManager.h; sourceTree = "<group>"; };
 		2A996A7327D79E7B0026BC35 /* CacheRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheRequestManager.m; sourceTree = "<group>"; };
 		2A996A7527D7C6CB0026BC35 /* BizStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BizStore.h; sourceTree = "<group>"; };
@@ -634,6 +643,12 @@
 				2A996A7927D86E540026BC35 /* IndexViewController.m */,
 				2AA81F3227E0A397000E12B5 /* AgreementViewController.h */,
 				2AA81F3327E0A397000E12B5 /* AgreementViewController.m */,
+				2A1F334C280EF4D60039F947 /* ListViewController.h */,
+				2A1F334D280EF4D60039F947 /* ListViewController.m */,
+				2A010C2B281256F200FE8B57 /* VideoEditorViewController.h */,
+				2A010C2C281256F200FE8B57 /* VideoEditorViewController.m */,
+				2A82F4E22822FB0400C9662E /* VideoCollectionViewCell.h */,
+				2A82F4E32822FB0400C9662E /* VideoCollectionViewCell.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -800,10 +815,13 @@
 			files = (
 				2AB66D6227C7ECBB008845F1 /* FFMpegCommand.mm in Sources */,
 				2AB66D5827C7EA8B008845F1 /* MainViewController.m in Sources */,
+				2A1F334E280EF4D60039F947 /* ListViewController.m in Sources */,
 				2A996A7427D79E7B0026BC35 /* CacheRequestManager.m in Sources */,
 				2AB66D3E27C7E637008845F1 /* ffmpeg_opt.c in Sources */,
 				2A81DB3F27D6AAC60059E5EB /* UIButton+Gradient.m in Sources */,
 				2A81DB3927D559390059E5EB /* UIColor+Extension.m in Sources */,
+				2A010C2D281256F200FE8B57 /* VideoEditorViewController.m in Sources */,
+				2A82F4E42822FB0400C9662E /* VideoCollectionViewCell.m in Sources */,
 				2A81DB3C27D67D5B0059E5EB /* LoginViewController.m in Sources */,
 				2A996A7727D7C6CB0026BC35 /* BizStore.m in Sources */,
 				2AB66D5B27C7EA94008845F1 /* MineViewController.m in Sources */,
@@ -969,7 +987,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
-				DEVELOPMENT_TEAM = 2CPBQW29PP;
+				DEVELOPMENT_TEAM = 6RTF5M8986;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Editor/PrefixHeader.pch";
@@ -1006,7 +1024,7 @@
 					"$(PROJECT_DIR)/Editor/fat-x264/lib",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Com.M1989.Editorrrrrrrr;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.M1989.Editorrrrrrrrr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1021,7 +1039,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
-				DEVELOPMENT_TEAM = 2CPBQW29PP;
+				DEVELOPMENT_TEAM = 6RTF5M8986;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Editor/PrefixHeader.pch";
@@ -1058,7 +1076,7 @@
 					"$(PROJECT_DIR)/Editor/fat-x264/lib",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Com.M1989.Editorrrrrrrr;
+				PRODUCT_BUNDLE_IDENTIFIER = Com.M1989.Editorrrrrrrrr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -60,7 +60,7 @@
     
     [SVProgressHUD setMinimumDismissTimeInterval:1.0];
     
-    self.navigationItem.
+//    self.navigationItem.
     
     
     UIButton *backBtn = [[UIButton alloc] init];

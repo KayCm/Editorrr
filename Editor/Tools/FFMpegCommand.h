@@ -114,6 +114,9 @@ NS_ASSUME_NONNULL_BEGIN
                                  WithInPut:(NSString *)input
                                 WithOutPut:(NSString *)output;
 
+-(NSString*)ffmpeg_command_manyVideo:(NSString *)inputs WithOutPut:(NSString *)output;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

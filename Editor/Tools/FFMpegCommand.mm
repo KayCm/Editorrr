@@ -296,6 +296,19 @@ extern "C" {
     
 }
 
+-(NSString*)ffmpeg_command_manyVideo:(NSString *)inputs WithOutPut:(NSString *)output{
+    
+    // ffmpeg -f concat -i filelist.txt -c copy output.mkv
+    
+    
+    
+    
+    
+    
+    return [NSString stringWithFormat:@"ffmpeg -f concat -safe 0 -i %@ -c copy %@",inputs,output];
+    
+}
+
 //-(void)ffmpeg_command{
 //
 //    //ffmpeg -i mmm -s 640x480 000

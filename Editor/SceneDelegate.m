@@ -10,6 +10,7 @@
 #import "IndexViewController.h"
 #import "MainViewController.h"
 #import "MineViewController.h"
+#import "ListViewController.h"
 #import "UIColor+Extension.h"
 
 @interface SceneDelegate ()
@@ -44,8 +45,10 @@
     [tabbar.tabBar setTintColor:[UIColor colorWithHexString:@"#B46DFA"]];
     
     UINavigationController *Nav = [[UINavigationController alloc] initWithRootViewController:tabbar];
-    //Nav.view.backgroundColor = [UIColor colorWithRed:248 green:248 blue:255 alpha:1];
+    Nav.view.backgroundColor = [UIColor blackColor];
+    [Nav.navigationBar setHidden:YES];
     self.window.rootViewController = Nav;
+    
     
     [self.window makeKeyAndVisible];
     
